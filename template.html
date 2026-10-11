@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{title}}</title>
+<meta name="description" content="{{meta_description}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{meta_description}}">
+<meta property="og:url" content="https://drewhoover.com/warm-desk-lookbook/">
+<meta property="og:image" content="https://drewhoover.com/warm-desk-lookbook/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{title}}">
+<meta name="twitter:description" content="{{meta_description}}">
+<meta name="twitter:image" content="https://drewhoover.com/warm-desk-lookbook/og.png">
+<link rel="canonical" href="https://drewhoover.com/warm-desk-lookbook/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='8' y='22' width='48' height='8' rx='2' fill='%231b1a17'/%3E%3Cpath d='M18 40c4-4-4-6 0-10M32 44c4-5-4-8 0-13M46 40c4-4-4-6 0-10' stroke='%23c4501b' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://drewhoover.com/embed/back-bar.js" async></script>
+<script src="https://drewhoover.com/embed/giscus.js" async></script>
+<style>
+:root{
+  --paper:#f5f1ea; --card:#fffdf9; --ink:#1b1a17; --muted:#6a645a; --hair:#ddd5c7;
+  --ember:#c4501b; --ember-soft:#f3dccb; --cool:#3d6b8a; --ok:#2f6b45; --ok-bg:#e1eee4;
+  --warn-bg:#f8e7cf; --warn-ink:#7a4306; --track:#ebe4d7;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-bottom:120px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;padding-bottom:96px}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+
+/* masthead */
+.masthead{padding:52px 0 26px}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.kicker a{color:inherit;text-decoration:none;transition:.15s;border-bottom:1px solid color-mix(in srgb,currentColor 35%,transparent)}
+.kicker a:hover{border-bottom-color:currentColor}
+h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(38px,6.6vw,74px);line-height:.98;letter-spacing:-.02em;margin:14px 0 14px;max-width:16ch}
+.sub{font-size:clamp(17px,2.1vw,20px);max-width:720px;margin:0 0 18px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+.pill{font:500 13px "IBM Plex Mono",monospace;border:1.5px solid var(--ink);border-radius:999px;padding:3px 10px;text-decoration:none}
+.pill:hover{background:var(--ink);color:var(--paper)}
+
+/* anchor + boxes */
+.anchor{margin:28px 0 8px;background:var(--card);border:1.5px solid var(--ink);padding:18px 18px 16px}
+.anchor h3{margin:0 0 4px;font:600 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.anchor p{margin:0 0 12px;max-width:820px}
+.bars{display:grid;gap:8px}
+.barrow{display:grid;grid-template-columns:150px 1fr 150px;gap:10px;align-items:center;font-size:14px}
+.barrow .lab{font-weight:600}
+.barrow .val{font:500 13px "IBM Plex Mono",monospace;text-align:right}
+.btrack{height:16px;background:var(--track);position:relative}
+.bfill{position:absolute;inset:0 auto 0 0;background:var(--ink)}
+.bfill.ember{background:var(--ember)}
+@media (max-width:600px){.barrow{grid-template-columns:1fr;gap:3px}.barrow .val{text-align:left}}
+.boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0 0}
+.box{background:var(--card);border:1.5px solid var(--hair);padding:14px 16px}
+.box h3{margin:0 0 6px;font:600 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ember)}
+.box p{margin:0;font-size:15px}
+.legend{font-size:14px;color:var(--muted);margin:16px 0 0;max-width:900px}
+
+/* sections */
+section{padding:44px 0 40px}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.sec-head h2{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(28px,4vw,42px);margin:0;letter-spacing:-.01em}
+.sec-head .count{font:500 14px "IBM Plex Mono",monospace;color:var(--muted)}
+.intro{max-width:780px;margin:0 0 22px}
+#desk{background:var(--paper)}
+#arms{background:#ece3d3}
+#floor{background:#24221f;color:#efe9df}
+#floor .intro,#floor .sec-head .count{color:#bdb5a8}
+#panel{background:#f4e4cf}
+#felt{background:#e4ded3}
+#bonus{background:var(--paper)}
+#cut{background:#1b1a17;color:#ece7de}
+#cut .intro,#cut .sec-head .count{color:#a7a196}
+.safety{background:var(--card);border-left:5px solid var(--ember);padding:12px 16px;margin:0 0 22px;max-width:820px;font-size:15px}
+.safety b{font:600 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ember);display:block;margin-bottom:3px}
+
+/* grid + cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.card{background:var(--card);color:var(--ink);border:1.5px solid var(--ink);display:flex;flex-direction:column;position:relative}
+.card.sel{outline:3px solid var(--ember);outline-offset:-1px}
+.rank{position:absolute;top:10px;left:10px;z-index:2;background:var(--ink);color:var(--paper);font:600 13px "IBM Plex Mono",monospace;padding:2px 8px}
+.media{background:#fff;border-bottom:1.5px solid var(--ink)}
+.main{aspect-ratio:4/3;width:100%;object-fit:contain;cursor:zoom-in;background:#fff}
+.thumbs{display:flex;gap:6px;padding:6px;border-top:1px solid var(--hair)}
+.thumbs img{width:50px;height:50px;object-fit:cover;border:1px solid var(--hair);cursor:pointer;background:#fff}
+.thumbs img.on{border-color:var(--ink)}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.shop{font:600 12px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.card h3{margin:0;font-size:20px;line-height:1.2;font-weight:700}
+.variant{font-size:14px;color:var(--muted);margin-top:2px}
+.price{font:600 15px "IBM Plex Mono",monospace}
+.price small{font-weight:400;color:var(--muted)}
+.meter{border:1px solid var(--hair);padding:8px 10px;background:#fff}
+.meter .top{display:flex;justify-content:space-between;gap:8px;font-size:13px;align-items:baseline}
+.meter .top b{font:600 15px "IBM Plex Mono",monospace}
+.meter .top span{font:500 12.5px "IBM Plex Mono",monospace;color:var(--muted);text-align:right}
+.mtrack{height:10px;background:var(--track);margin-top:6px;position:relative}
+.mfill{position:absolute;inset:0 auto 0 0;background:var(--ember)}
+.mfill.low{background:repeating-linear-gradient(90deg,var(--ember) 0 50%,transparent 50%)}
+.mnote{font-size:12px;color:var(--muted);margin-top:4px}
+.meter.zero{background:var(--ok-bg);border-color:transparent}
+.meter.zero .top b{color:var(--ok)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 12px "IBM Plex Mono",monospace;padding:3px 7px;border-radius:3px;background:#efeae0;color:#3d3a34}
+.chip.stand{background:var(--ok-bg);color:#14532d}
+.chip.seat{background:#e3ebf2;color:#1f4460}
+.chip.flag{background:var(--warn-bg);color:var(--warn-ink)}
+.note{font-size:15px;margin:0}
+.rating{font:500 12.5px "IBM Plex Mono",monospace;color:var(--muted)}
+.actions{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
+.buy{flex:1 1 160px;text-align:center;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;padding:11px 12px;border:1.5px solid var(--ink)}
+.buy:hover{background:var(--card);color:var(--ink)}
+.buy.alt{background:transparent;color:var(--ink);flex:0 1 auto}
+.add{flex:0 0 auto;font:600 13px Inter,sans-serif;border:1.5px solid var(--ember);color:var(--ember);background:transparent;padding:10px 12px;cursor:pointer;touch-action:manipulation}
+.card.sel .add{background:var(--ember);color:#fff}
+
+/* cut list */
+.cutlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:0 28px;margin:0;padding:0;list-style:none}
+.cutlist li{display:flex;flex-direction:column;gap:2px;padding:10px 0;border-bottom:1px solid #3a3833}
+.cutlist .n{font-weight:600}
+.cutlist .n a{text-decoration:none;border-bottom:1px solid #66625a}
+.cutlist .r{font:500 13px "IBM Plex Mono",monospace;color:#e9b49c}
+
+/* tally */
+.tally{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--ink);color:#f5f1ea;border-top:3px solid var(--ember)}
+.tally .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;padding-top:10px;padding-bottom:10px}
+.tally .ttl{font:600 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:#e9b49c}
+.tally .nums{font:500 14px "IBM Plex Mono",monospace}
+.tally .nums b{font-weight:600;color:#fff}
+.thint{margin:12px 0 0 !important;font-size:14px;color:var(--muted)}
+.tally .nums{flex:1 1 240px}
+@media (max-width:600px){.tally .wrap{gap:4px 10px;padding-top:7px;padding-bottom:7px}.tally .nums{font-size:12.5px}.tally .ttl{font-size:11px}}
+.tally button{font:600 12px Inter,sans-serif;background:transparent;color:#f5f1ea;border:1px solid #6d675d;padding:5px 9px;cursor:pointer}
+.tbar{flex:1 1 100%;height:8px;background:#3a3732;position:relative}
+.tbar i{position:absolute;inset:0 auto 0 0;background:var(--ember)}
+
+footer{padding:26px 0 40px;font-size:14px;color:var(--muted)}
+footer .src{font-size:13px}
+footer .src a{color:var(--muted)}
+#comments{max-width:1200px;margin:0 auto;padding:0 16px 40px}
+.lb{position:fixed;inset:0;background:rgba(10,10,10,.88);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.lb.on{display:flex}
+.lb img{max-width:min(92vw,1100px);max-height:88vh;background:#fff}
+.lb .x{position:absolute;top:10px;right:18px;color:#fff;font-size:40px;cursor:pointer;line-height:1}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker"><a href="https://github.com/DrewHoo/shopping-lookbook" target="_blank" rel="noopener">A shopping lookbook</a> · <span id="kickerTail"></span></div>
+    <h1 id="h1"></h1>
+    <p class="sub" id="sub"></p>
+    <nav class="pills" id="pills"></nav>
+    <div class="anchor">
+      <h3>The Vornado line</h3>
+      <p id="vornadoBox"></p>
+      <div class="bars" id="anchorBars"></div>
+      <p class="thint" id="tallyHint"></p>
+    </div>
+    <div class="boxes">
+      <div class="box"><h3>Forearms first</h3><p id="handsBox"></p></div>
+      <div class="box"><h3>A correction</h3><p id="correctionBox"></p></div>
+    </div>
+    <p class="legend" id="legend"></p>
+  </div>
+</header>
+
+<main id="sections"></main>
+
+<footer><div class="wrap">
+  <p id="footer"></p>
+  <p class="src">Sources: Vornado VH200 settings from <a href="https://www.pcrichard.com/" target="_blank" rel="noopener">P.C. Richard</a>; Connecticut rates from <a href="https://www.energysage.com/local-data/electricity-cost/ct/" target="_blank" rel="noopener">EnergySage</a>; forearm warming from <a href="https://www.militarytimes.com/news/your-army/2020/02/10/no-more-hands-in-pockets-army-scientists-testing-how-to-keep-warm-without-gloves/" target="_blank" rel="noopener">USARIEM via Military Times</a>; low-temperature burns from <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10333022/" target="_blank" rel="noopener">PMC10333022</a>; zero-clearance panels allowed under desks per <a href="https://ehs.washington.edu/system/files/resources/Temporary-heaters.pdf" target="_blank" rel="noopener">UW EHS</a>; QMark clearance from its <a href="https://marleymep.com/wp-content/uploads/5200-2184-011.pdf" target="_blank" rel="noopener">manual</a>; wool flammability from <a href="https://www.woolmark.com/globalassets/_06-new-woolmark/_industry/research/factsheets/gd2405-wool-is-fire-resistant.pdf" target="_blank" rel="noopener">Woolmark</a>; desk-skirt reports from <a href="https://permies.com/t/174380/Seeking-desk-skirt-kotatsu-suggestions" target="_blank" rel="noopener">permies.com</a>. Every listing opened in a browser on October 11, 2026.</p>
+</div></footer>
+<div id="comments"></div>
+
+<div class="tally" role="region" aria-label="Cocoon tally">
+  <div class="wrap">
+    <span class="ttl">Your cocoon</span>
+    <span class="nums" id="tallyNums"></span>
+    <button type="button" id="tallyClear">Clear</button>
+    <div class="tbar" aria-hidden="true"><i id="tallyBar"></i></div>
+  </div>
+</div>
+<div class="lb" id="lb" role="dialog" aria-label="Image viewer"><span class="x" aria-label="Close">&times;</span><img id="lbimg" alt=""></div>
+
+<script>
+/*DATA*/
+const COPY = /*COPY*/;
+const SECS = ['desk','arms','floor','panel','felt','bonus'];
+const DEFAULT_SEL = ['giambwa','cozy-fw','cozylegs'];
+
+const $ = (s,el=document) => el.querySelector(s);
+const esc = s => String(s??'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const cph = w => w*RATE/10;             // cents per hour
+const coef = w => w/VORNADO_W;
+const perMonth = w => w/1000*8*21*RATE; // dollars, 8 h × 21 workdays
+const fmtC = c => c < 1 ? c.toFixed(2)+'¢' : c.toFixed(1)+'¢';
+const fmtX = x => x < 0.01 ? x.toFixed(3)+'×' : x.toFixed(2)+'×';
+const disp = (u,w) => u.includes('cdn.shopify.com') ? u+'?width='+w
+  : u.includes('etsystatic') ? u.replace('il_fullxfull.', w>300?'il_794xN.':'il_170x135.')
+  : u.includes('media-amazon') ? u.replace('_AC_SL1000_', w>300?'_AC_SL800_':'_AC_SL160_') : u;
+
+function meter(it){
+  if (!it.w) return `<div class="meter zero"><div class="top"><b>0 W</b><span>no plug, no bill</span></div></div>`;
+  const pct = Math.max(1.5, coef(it.w)*100*3); // bar scale: full width = one third of a Vornado
+  return `<div class="meter"><div class="top"><b>${it.w} W${it.wEst?' est.':''}</b>
+      <span>${fmtC(cph(it.w))}/hr · ${fmtX(coef(it.w))} Vornado</span></div>
+    <div class="mtrack" title="Bar is full at one third of the Vornado on medium"><div class="mfill" style="width:${Math.min(100,pct)}%"></div></div>
+    <div class="mnote">${it.battery?'battery; ':''}≈ $${perMonth(it.w).toFixed(2)} a month of workdays${it.wLow?` · ${it.wLow} W on low`:''}${it.wEst?' · not published, estimated':''}</div></div>`;
+}
+
+function card(it){
+  const imgs = it.imgs.map(u => ({full:u, d:disp(u,800), t:disp(u,120)}));
+  const chips = [
+    it.stand==='both' ? '<span class="chip stand">Works standing</span>' : it.stand==='seated' ? '<span class="chip seat">Seated only</span>' : '',
+    it.floor==='hard' ? '<span class="chip flag">Hard floors only</span>' : '',
+    ...it.specs.map(s=>`<span class="chip">${esc(s)}</span>`),
+    ...it.flags.filter(f=>f!=='Hard floors only').map(f=>`<span class="chip flag">${esc(f)}</span>`)
+  ].join('');
+  const host = new URL(it.url).hostname.replace(/^www\./,'');
+  return `<article class="card" data-id="${it.id}">
+    <span class="rank">#${it.rank}</span>
+    <div class="media">
+      <img class="main" src="${imgs[0].d}" data-full="${imgs[0].full}" alt="${esc(it.brand+' '+it.name)}" loading="lazy">
+      ${imgs.length>1?`<div class="thumbs">${imgs.map((im,i)=>`<img src="${im.t}" data-disp="${im.d}" data-full="${im.full}" class="${i?'':'on'}" alt="" loading="lazy">`).join('')}</div>`:''}
+    </div>
+    <div class="body">
+      <div class="shop">${esc(it.brand)} · ${esc(it.via)}</div>
+      <div><h3>${esc(it.name)}</h3><div class="variant">${esc(it.variant)}</div></div>
+      <div class="price">$${it.price.toFixed(2)}${it.priceNote?` <small>${esc(it.priceNote)}</small>`:''}</div>
+      ${meter(it)}
+      <div class="chips">${chips}</div>
+      <p class="note">${esc((COPY.notes||{})[it.id]||'')}</p>
+      ${it.rating?`<div class="rating">${esc(it.rating)}</div>`:''}
+      <div class="actions">
+        <a class="buy" href="${it.url}" target="_blank" rel="noopener">${it.via==='Amazon'?'View on Amazon':'Buy at '+esc(host)} ↗</a>
+        ${it.also?`<a class="buy alt" href="${it.also.url}" target="_blank" rel="noopener">${esc(it.also.label)} ↗</a>`:''}
+        ${it.w?`<button class="add" type="button" aria-pressed="false">+ Cocoon</button>`:''}
+      </div>
+    </div>
+  </article>`;
+}
+
+function render(){
+  $('#kickerTail').textContent = COPY.kicker_tail;
+  $('#h1').textContent = COPY.h1;
+  $('#sub').textContent = COPY.sub;
+  $('#vornadoBox').textContent = COPY.vornado_box;
+  $('#handsBox').textContent = COPY.hands_box;
+  $('#correctionBox').textContent = COPY.correction_box;
+  $('#legend').textContent = COPY.legend;
+  $('#footer').textContent = COPY.footer;
+  $('#tallyHint').textContent = COPY.tally_hint;
+
+  const S = COPY.sections||{};
+  $('#sections').innerHTML = SECS.map(sec=>{
+    const items = ITEMS.filter(i=>i.sec===sec).sort((a,b)=>a.rank-b.rank);
+    return `<section id="${sec}"><div class="wrap">
+      <div class="sec-head"><h2>${esc(S[sec]?.title)}</h2><span class="count">${items.length} picks</span></div>
+      <p class="intro">${esc(S[sec]?.intro)}</p>
+      ${sec==='felt'?`<div class="safety"><b>Before you build the cave</b>${esc(COPY.safety_box)}</div>`:''}
+      <div class="grid">${items.map(card).join('')}</div>
+    </div></section>`;
+  }).join('') + `<section id="cut"><div class="wrap">
+      <div class="sec-head"><h2>${esc(S.cut?.title)}</h2><span class="count">${CUT.length} checked</span></div>
+      <p class="intro">${esc(S.cut?.intro)}</p>
+      <ul class="cutlist">${CUT.map(c=>`<li><span class="n"><a href="${c.url}" target="_blank" rel="noopener">${esc(c.name)}</a></span><span class="r">${esc(c.why)}</span></li>`).join('')}</ul>
+    </div></section>`;
+
+  $('#pills').innerHTML = SECS.map(s=>`<a class="pill" href="#${s}">${esc(S[s]?.title)} · ${ITEMS.filter(i=>i.sec===s).length}</a>`).join('')
+    + `<a class="pill" href="#cut">${esc(S.cut?.title)} · ${CUT.length}</a>`;
+
+  const row = (lab,w,cls) => `<div class="barrow"><span class="lab">${esc(lab)}</span>
+    <div class="btrack"><div class="bfill ${cls||''}" style="width:${Math.max(0.6,w/VORNADO_W*100)}%"></div></div>
+    <span class="val">${w.toLocaleString()} W · ${fmtC(cph(w))}/hr</span></div>`;
+  const by = id => ITEMS.find(i=>i.id===id);
+  $('#anchorBars').innerHTML = row('Vornado, medium', VORNADO_W)
+    + row('Cozy Legs panel', by('cozylegs').w, 'ember') + row('Cozy rubber mat', by('cozy-fw').w, 'ember')
+    + row('Heated desk mat', by('giambwa').w, 'ember') + row('Heated vest', by('venustas').w, 'ember');
+}
+
+/* cocoon tally */
+let SEL;
+try { SEL = new Set(JSON.parse(localStorage.getItem('cocoon')||'null') || DEFAULT_SEL); } catch(e){ SEL = new Set(DEFAULT_SEL); }
+function save(){ try { localStorage.setItem('cocoon', JSON.stringify([...SEL])); } catch(e){} }
+function tally(){
+  const picked = ITEMS.filter(i=>SEL.has(i.id) && i.w);
+  const w = picked.reduce((a,i)=>a+i.w,0);
+  $('#tallyNums').innerHTML = picked.length
+    ? `${picked.length} item${picked.length>1?'s':''} · <b>${w} W</b> · <b>${fmtC(cph(w))}/hr</b> · <b>${fmtX(coef(w))}</b> the Vornado · ≈ $${perMonth(w).toFixed(2)}/mo vs $${perMonth(VORNADO_W).toFixed(2)}`
+    : 'Nothing picked. Tap “+ Cocoon” on any powered card.';
+  $('#tallyBar').style.width = Math.min(100, coef(w)*100)+'%';
+  document.querySelectorAll('.card').forEach(c=>{
+    const on = SEL.has(c.dataset.id); c.classList.toggle('sel', on);
+    const b = $('.add',c); if (b){ b.setAttribute('aria-pressed', on); b.textContent = on ? '✓ In cocoon' : '+ Cocoon'; }
+  });
+}
+
+document.addEventListener('click', e=>{
+  const add = e.target.closest('.add');
+  if (add){ const id = add.closest('.card').dataset.id; SEL.has(id)?SEL.delete(id):SEL.add(id); save(); tally(); return; }
+  if (e.target.closest('#tallyClear')){ SEL.clear(); save(); tally(); return; }
+  const th = e.target.closest('.thumbs img');
+  if (th){ const card = th.closest('.card'); const m = $('.main',card); m.src = th.dataset.disp; m.dataset.full = th.dataset.full;
+    card.querySelectorAll('.thumbs img').forEach(t=>t.classList.toggle('on', t===th)); return; }
+  const main = e.target.closest('.main');
+  if (main){ $('#lbimg').src = main.dataset.full; $('#lb').classList.add('on'); return; }
+  if (e.target.closest('#lb')) $('#lb').classList.remove('on');
+});
+document.addEventListener('keydown', e=>{ if (e.key==='Escape') $('#lb').classList.remove('on'); });
+render(); tally();
+</script>
+</body>
+</html>
